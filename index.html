@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Generator</title>
+
+</head>
+
+<body>
+  <h1>Password Generator</h1>
+
+  <h3 id="password"></h3>
+  <script>
+    passwordDisplay = document.getElementById("password");
+   
+
+
+    const sillyWords = ["Bumfuzzle", "Fartlek", "Erf", "Hullaballoo", "Obelus"]
+    let password = ""
+
+    for (const word of sillyWords) {
+      const randomIndex = (Math.floor(Math.random() * sillyWords.length))
+      password += sillyWords[randomIndex]
+      const randomNumber = (Math.floor(Math.random() * 10))
+      password += randomNumber
+    }
+    passwordDisplay.innerHTML = password
+
+  </script>
+</body>
+
+</html>
